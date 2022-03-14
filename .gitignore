@@ -1,0 +1,14 @@
+# [Useless Files]
+*/__pycache__/
+*pyc
+
+# [Virtual Environment]
+.venv
+
+# [Build Files]
+animu.egg-info
+build
+dist
+
+# [Test Files]
+test.py
