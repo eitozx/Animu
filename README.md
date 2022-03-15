@@ -30,11 +30,12 @@ From there, further process should start in your DM. Good luck!
 Make sure that you've joined the support server, or else it won't work. If it's still not working, please ask for help in their official server.
 
 ## Any examples?
-Check [examples](https://github.com/EitoZX/Animu/examples/) folder for examples.
+Check [examples](https://github.com/EitoZX/Animu/tree/master/examples) folder for examples.
 
 ## Any ratelimit?
 Yes, 5 requests/second.
 
 ## Related Links
 
+- [Documentation](https://github.com/EitoZX/Animu/blob/master/DOCUMENTATION.md)
 - [Official Animu API Discord Server](https://discord.gg/yyW389c)
