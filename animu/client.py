@@ -2,6 +2,7 @@ import aiohttp
 from animu import model
 
 class Client:
+    
     def __init__(self, token: str):
         self._header = {"Auth": token}
         self._baseurl = "https://animu.ml/api/"

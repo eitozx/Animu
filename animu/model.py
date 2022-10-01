@@ -1,15 +1,12 @@
-class Base:
+class _Base:
     def __init__(self, data):
         self._data = data
-        
+
     def __getitem__(self, key):
         return self._data[key]
 
-    def __str__(self):
-        return str(self._data)
 
-
-class Fact(Base):
+class Fact(_Base):
     def __init__(self, data):
         super().__init__(data)
 
@@ -17,32 +14,44 @@ class Fact(Base):
         self.fact = data.get('fact')
         self.tags = data.get('tags')
 
+    def __str__(self):
+        return self.fact
 
-class Password(Base):
-    def __init__(self, data):
+
+class Password(_Base):
+    def __init__(self, data):        
         super().__init__(data)
 
         self.password = data.get('pass')
 
+    def __str__(self):
+        return self.password
 
-class Quote(Base):
+
+class Quote(_Base):
     def __init__(self, data):
         super().__init__(data)
-        
+
         self.id = data.get('_id')
         self.quote = data.get('quote')
         self.anime = data.get('anime')
         self.said = data.get('said')
 
+    def __str__(self):
+        return self.quote
 
-class Roleplay(Base):
+
+class Roleplay(_Base):
     def __init__(self, data):
         super().__init__(data)
 
         self.url = data.get('url')
 
+    def __str__(self):
+        return self.url
 
-class Waifu(Base):
+
+class Waifu(_Base):
     def __init__(self, data):
         super().__init__(data)
         
@@ -64,3 +73,6 @@ class Waifu(Base):
         self.hate = self.statistics.get('hate')
         self.upvote = self.statistics.get('upvote')
         self.downvote = self.statistics.get('downvote')
+        
+    def __str__(self):
+        return self.en_name or self.jp_name or self.alt_name
