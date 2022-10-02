@@ -1,8 +1,40 @@
 import aiohttp
+import requests
+
 from animu import model
 
 class Client:
+    def __init__(self, token: str):
+        self._header = {"Auth": token}
+        self._baseurl = "https://animu.ml/api/"
+
+    def _endpoint(self, endpoint: str):
+        response = requests.get(f"{self._baseurl}{endpoint}", headers=self._header)
+        result = response.json()
+        return result
     
+    def fact(self):
+        data = self._endpoint('fact')
+        return model.Fact(data)
+
+    def password(self):
+        data = self._endpoint('password')
+        return model.Password(data)
+
+    def quote(self):
+        data = self._endpoint('quote')
+        return model.Quote(data)
+
+    def roleplay(self, query: str):
+        data = self._endpoint(query)
+        return model.Roleplay(data)
+
+    def waifu(self):
+        data = self._endpoint('waifu')
+        return model.Waifu(data)
+
+
+class AsyncClient:    
     def __init__(self, token: str):
         self._header = {"Auth": token}
         self._baseurl = "https://animu.ml/api/"

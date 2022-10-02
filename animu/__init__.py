@@ -16,4 +16,4 @@ __copyright__ = 'Copyright (c) 2022-present EitoZX (Eito)'
 __version__ = "0.1.0"
 
 
-from animu.client import Client
+from animu.client import Client, AsyncClient
