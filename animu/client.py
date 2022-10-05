@@ -2,6 +2,7 @@ import aiohttp
 import requests
 
 from animu import model
+from .roleplay import Roleplay
 
 class Client:
     def __init__(self, token: str):
@@ -25,7 +26,7 @@ class Client:
         data = self._endpoint('quote')
         return model.Quote(data)
 
-    def roleplay(self, query: str):
+    def roleplay(self, query: Roleplay):
         data = self._endpoint(query)
         return model.Roleplay(data)
 
@@ -57,7 +58,7 @@ class AsyncClient:
         data = await self._endpoint('quote')
         return model.Quote(data)
 
-    async def roleplay(self, query: str):
+    async def roleplay(self, query: Roleplay):
         data = await self._endpoint(query)
         return model.Roleplay(data)
 
