@@ -17,3 +17,4 @@ __version__ = "0.1.0"
 
 
 from animu.client import Client, AsyncClient
+from animu.roleplay import Roleplay
