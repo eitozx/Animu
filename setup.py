@@ -18,7 +18,7 @@ setuptools.setup(
     author_email = "iameitozx@gmail.com",
     url = "http://github.com/EitoZX/Animu",
     version = version,
-    description = "An async wrapper for Animu API written in Python.",
+    description = "Animu API Wrapper written in Python that has both Sync & Async Client",
     long_description = long_description,
     long_description_content_type = "text/markdown",
     packages = setuptools.find_packages(),
