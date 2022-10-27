@@ -1,4 +1,9 @@
 # Animu
+
+![Pypi Release](https://img.shields.io/pypi/v/animu.svg?style=for-the-badge&logo=pypi&color=yellowgreen&logoColor=white)
+![Download Stats](https://img.shields.io/pypi/dm/animu?color=blueviolet&logo=pypi&logoColor=white&style=for-the-badge)
+![Latest Release](https://img.shields.io/github/v/release/eitozx/animu?include_prereleases&label=Latest%20Release&logo=github&sort=semver&style=for-the-badge&logoColor=white)
+
 An async wrapper for [Animu API](https://animu.ml/) written in Python.
 
 ## Key Features
